@@ -6,6 +6,7 @@
   padding: 3rem;
   border-radius: 3px;
   animation: opacity ease-in-out 0.5s;
+  box-shadow: 0 0 1rem var(--color-primary);
 }
 
 @keyframes opacity {

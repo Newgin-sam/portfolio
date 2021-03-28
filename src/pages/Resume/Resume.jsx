@@ -7,6 +7,7 @@ function Resume(props) {
         <div>
         <PageContainer >
             <PageTitle>RESUME</PageTitle>
+            
         </PageContainer>
         </div>
     );
