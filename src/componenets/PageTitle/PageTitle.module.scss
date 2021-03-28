@@ -1,0 +1,19 @@
+.titles {
+  font-size: 1.75rem;
+  font-weight: 300;
+  letter-spacing: 0.5rem;
+  color: #bababa;
+
+  &::after {
+    content: "";
+    display: block;
+    margin-top: 1rem;
+    height: 1px;
+    width: 18rem;
+    background-color: #00dcff;
+  }
+}
+.icon {
+  padding-right: 1rem;
+  margin-bottom: -0.2rem;
+}

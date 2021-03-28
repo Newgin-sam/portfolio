@@ -1,0 +1,20 @@
+.container {
+  background-color: rgba(0, 0, 0, 0.75);
+  width: 80%;
+  margin: auto;
+  margin-top: 3rem;
+  padding: 3rem;
+  border-radius: 3px;
+  animation: opacity ease-in-out 0.5s;
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+    transform: translateY(5rem);
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

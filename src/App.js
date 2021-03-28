@@ -1,18 +1,47 @@
-import React,{lazy,Suspense} from 'react';
+import React,{lazy,Suspense, useEffect, useState} from 'react';
 import Footer from './componenets/footer/Footer';
-import { Switch, Route, Redirect } from 'react-router-dom';
+import Landing from './pages/landing/Landing';
+import { Switch, Route, Redirect,withRouter } from 'react-router-dom';
 
 import './App.css';
 import './sass/index.scss'
 
-const Landing = lazy(() => import ('./pages/landing/Landing'));
+// const Landing = lazy(() => import ('./pages/landing/Landing'));
+const About = lazy(() => import ('./pages/About/About'));
+const Resume = lazy(() => import ('./pages/Resume/Resume'));
+const Certification = lazy(() => import ('./pages/Certification/Certification'));
+const Contact = lazy(() => import ('./pages/Contact/Contact'));
 
-const App = () => {
+const App = (props) => {
+  
+
   return (
     <div className="App">
+    <Landing  />
       <Suspense fallback={<div />}>
         <Switch>
-          <Landing home={false} />
+          <Route exact
+          path='/'
+          render={() => <div> </div>}
+          />
+          <Route exact
+            path='/about'
+            render={() => <About />}
+          />
+          <Route exact
+            path='/resume'
+            render={() => <Resume />}
+          />
+          <Route exact
+            path='/certification'
+            render={() => <Certification />}
+          />
+          <Route exact
+            path='/contact'
+            render={() => <Contact />}
+          />
+         
+          <Route render={() => <Redirect to={{pathname: "/"}} />} />
         
         </Switch>
       </Suspense>
@@ -21,4 +50,4 @@ const App = () => {
   );
 }
 
-export default App;
+export default withRouter(App);
