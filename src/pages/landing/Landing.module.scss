@@ -1,10 +1,12 @@
 .header {
   width: 100%;
+  position: fixed;
   // height: 95%;
   // padding-top: 35vh;
   display: grid;
   grid-template-columns: 1fr 1fr max-content 5vw;
   grid-template-rows: 9rem max-content 1fr;
+  z-index: 100;
   // transition: all 2s;
 }
 .container {
@@ -21,7 +23,7 @@
     grid-row: 1/2;
     width: 100%;
     margin: 0;
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgb(0, 0, 0);
     align-items: center;
     box-shadow: 0 0 1rem var(--color-primary);
   }
@@ -90,11 +92,13 @@
     color: var(--color-primary);
   }
 }
-ul,
-li,
-a {
-  text-decoration: none;
-  list-style: none;
+.container {
+  ul,
+  li,
+  a {
+    text-decoration: none;
+    list-style: none;
+  }
 }
 
 .listContainer {

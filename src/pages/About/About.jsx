@@ -2,7 +2,9 @@ import React from 'react';
 import PageTitle from '../../componenets/PageTitle/PageTitle';
 import PageContainer from '../../componenets/PageContainer/PageContainer';
 import SecondaryTitle from '../../componenets/SecondaryTitle/SecondaryTitle';
-import { HiOutlineChevronRight } from "react-icons/hi";
+import { FaReact,FaNodeJs,FaNode,FaJava } from "react-icons/fa";
+import { SiJavascript,SiMongodb,SiSass } from "react-icons/si";
+import {AiOutlineConsoleSql} from "react-icons/ai";
 
 import styles from './About.module.scss';
 import img from '../../assets/newgin-2.jpeg';
@@ -12,7 +14,9 @@ function About(props) {
         <div>
             <PageContainer >
                 <PageTitle>ABOUT</PageTitle>
-                <SecondaryTitle>Who am i ?</SecondaryTitle>
+                <div className={styles.spaceAbove}>
+                    <SecondaryTitle >Who am i ?</SecondaryTitle>
+                </div>
                 <div className={styles.introductionContainer}>
                     <img alt="newgin sam" className={styles.image} src={img}></img>
                     <section className={styles.about}>
@@ -63,6 +67,60 @@ function About(props) {
                             Positive driven and confident individual with an apt for learning new technology. Excellent problem solver with strong analytical skills.
                             I want to work with an organization where i can fully utilize my training and skills, while making a significant contribution to the success of the company.
                         </p>
+                    </section>
+                    <section className = {styles.skills}>
+                        <PageTitle>SKILLS</PageTitle>
+                        <div className={styles.skillContainer}>
+                            <div className={styles.skill}>
+                                <div className={styles.skill__iconContainer}>
+                                    <FaReact className={styles.skill__icon}/>
+                                </div>
+                                <h3 className={styles.skill__iconLegend}>REACT</h3>
+                            </div>
+                            <div className={styles.skill}>
+                                <div className={styles.skill__iconContainer}>
+                                    <FaNode className={styles.skill__icon}/>
+                                </div>
+                                <h3 className={styles.skill__iconLegend}>NODE</h3>
+                            </div>
+                            <div className={styles.skill}>
+                                <div className={styles.skill__iconContainer}>
+                                    <FaNodeJs className={styles.skill__icon}/>
+                                </div>
+                                <h3 className={styles.skill__iconLegend}>EXPRESS</h3>
+                            </div>
+                            <div className={styles.skill}>
+                                <div className={styles.skill__iconContainer}>
+                                    <SiSass className={styles.skill__icon}/>
+                                </div>
+                                <h3 className={styles.skill__iconLegend}>SCSS</h3>
+                            </div>
+                            <div className={styles.skill}>
+                                <div className={styles.skill__iconContainer}>
+                                    <SiJavascript className={styles.skill__icon}/>
+                                </div>
+                                <h3 className={styles.skill__iconLegend}>JAVASCRIPT</h3>
+                            </div>
+                            <div className={styles.skill}>
+                                <div className={styles.skill__iconContainer}>
+                                    <FaJava className={styles.skill__icon}/>
+                                </div>
+                                <h3 className={styles.skill__iconLegend}>JAVA</h3>
+                            </div>
+                            <div className={styles.skill}>
+                                <div className={styles.skill__iconContainer}>
+                                    <SiMongodb className={styles.skill__icon}/>
+                                </div>
+                                <h3 className={styles.skill__iconLegend}>MONGODB</h3>
+                            </div>
+                            <div className={styles.skill}>
+                                <div className={styles.skill__iconContainer}>
+                                    <AiOutlineConsoleSql className={styles.skill__icon}/>
+                                </div>
+                                <h3 className={styles.skill__iconLegend}>SQL</h3>
+                            </div>
+
+                        </div>
                     </section>
                 </div>
             </PageContainer>

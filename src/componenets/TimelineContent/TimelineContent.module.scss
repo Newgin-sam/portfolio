@@ -1,0 +1,57 @@
+.timelineHead {
+  color: var(--color-primary-light);
+  font-size: 2rem;
+  font-family: var(--font-quaternary);
+  letter-spacing: 0.2px;
+}
+.period {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.6rem;
+  font-family: var(--font-secondary);
+  font-size: 2rem;
+  background-color: #2e2e2e;
+}
+.summaryContent {
+  font-family: var(--font-tertiary);
+  font-size: 1.7rem;
+  line-height: 2.5rem;
+  font-weight: 400;
+}
+.I {
+  font-style: italic;
+}
+.mtb {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+.spaceAbove {
+  margin-top: 1rem;
+}
+
+.contentContainer {
+  border-left: 2px solid var(--color-grey-dark);
+  padding-left: 2rem;
+  position: relative;
+  min-height: 40px;
+
+  &::before {
+    content: "";
+    height: 2rem;
+    width: 2rem;
+    display: block;
+    position: absolute;
+    left: -1.1rem;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+  }
+}
+
+.List {
+  font-family: var(--font-tertiary);
+  font-size: 1.7rem;
+  line-height: 2.5rem;
+  font-weight: 400;
+  line-height: 3rem;
+  padding: 2rem 0rem 4rem 2rem;
+}
