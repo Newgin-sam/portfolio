@@ -1,15 +1,3 @@
-.spaceAbove {
-  margin-top: 1rem;
-}
-.container {
-  display: grid;
-  margin-top: 2rem;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 35rem);
-  grid-gap: 7rem;
-  grid-row-gap: 5rem;
-  margin: 5rem 5rem;
-}
 .card {
   perspective: 600rem;
   // -moz-perspective: 600rem;
@@ -81,7 +69,8 @@
 .bhead {
   font-size: 2.5rem;
   font-family: var(--font-primary);
-  font-weight: 700;
+  font-weight: 500;
+  padding: 0 1rem;
   text-align: center;
   color: var(--color-grey);
 }
@@ -94,14 +83,21 @@
 .description {
   font-size: 2rem;
   text-align: center;
-  font-family: var(--font-primary);
+  font-family: var(--font-teritary);
+  padding: 0 1rem;
+  font-weight: 100;
   line-height: 4rem;
 }
 .at {
   text-align: center;
-  font-size: 3rem;
-  font-family: var(--font-secondary);
+  font-size: 2.85rem;
+  font-family: var(--font-quaternary);
   letter-spacing: 2px;
+  font-weight: 700;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  color: #ffffff38;
+  text-transform: uppercase;
 }
 
 .card {
