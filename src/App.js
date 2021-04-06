@@ -1,7 +1,8 @@
-import React,{lazy,Suspense, useEffect, useState} from 'react';
+import React,{lazy,Suspense} from 'react';
 import Footer from './componenets/footer/Footer';
 import Landing from './pages/landing/Landing';
 import { Switch, Route, Redirect,withRouter } from 'react-router-dom';
+import { Scrollbars } from 'react-custom-scrollbars';
 
 import './App.css';
 import './sass/index.scss'
@@ -17,6 +18,7 @@ const App = (props) => {
 
   return (
     <div className="App">
+    <Scrollbars  autoHide autoHideTimeout={1000} autoHideDuration={200} >
     <Landing  />
       <Suspense fallback={<div />}>
         <Switch>
@@ -46,6 +48,7 @@ const App = (props) => {
         </Switch>
       </Suspense>
       <Footer/>
+      </Scrollbars>
     </div>
   );
 }

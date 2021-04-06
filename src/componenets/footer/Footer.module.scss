@@ -1,13 +1,14 @@
 .span {
   color: var(--color-primary);
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-family: "Caveat";
 }
 .text {
-  font-size: 1.25rem;
+  font-size: 1.75rem;
+  font-family: monospace;
 }
 .container {
-  position: absolute;
+  position: fixed;
   right: 0;
   bottom: 0;
   margin-right: 4rem;
