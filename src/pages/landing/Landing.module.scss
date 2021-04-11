@@ -48,8 +48,8 @@
   line-height: 1;
   grid-row: 2/3;
   grid-column: 1/-1;
-  animation: left 1s;
-  animation-delay: 0.5s;
+  animation: popup 1s;
+  animation-delay: 0.15s;
   animation-fill-mode: backwards;
   position: relative;
   // text-shadow: 0.3rem 0.15rem 0 rgba(200, 0, 0, 0.9),
@@ -88,7 +88,7 @@
   grid-column: 1/-1;
 
   animation: heading2 0.5s;
-  animation-delay: 1.5s;
+  animation-delay: 1s;
   animation-fill-mode: backwards;
 
   &__active {
@@ -126,27 +126,27 @@
 
   &__1 {
     animation: link 0.5s;
-    animation-delay: 1.75s;
+    animation-delay: 1.25s;
     animation-fill-mode: backwards;
   }
   &__2 {
     animation: link 0.5s;
-    animation-delay: 2.25s;
+    animation-delay: 1.75s;
     animation-fill-mode: backwards;
   }
   &__3 {
     animation: link 0.5s;
-    animation-delay: 2.75s;
+    animation-delay: 2.25s;
     animation-fill-mode: backwards;
   }
   &__4 {
     animation: link 0.5s;
-    animation-delay: 3.25s;
+    animation-delay: 2.75s;
     animation-fill-mode: backwards;
   }
   &__5 {
     animation: link 0.5s;
-    animation-delay: 3.75s;
+    animation-delay: 3.25s;
     animation-fill-mode: backwards;
   }
   &__active {
@@ -169,7 +169,7 @@
 .LinkActive {
   color: var(--color-primary);
 }
-@keyframes left {
+@keyframes popup {
   0% {
     opacity: 0;
     transform: scale(0.5);

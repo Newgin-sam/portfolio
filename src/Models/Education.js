@@ -19,4 +19,5 @@ const Education = [
    }
 ]
 
+export const summary = 'Motivated Web Developer with passion to learn, code, improvise and solve problems. I have 1 year of experience building responsive web applications with React, Redux, Express and Node. Good team player with excellent technical, communication and interpersonal skills'
 export default Education;

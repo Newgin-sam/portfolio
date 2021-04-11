@@ -4,7 +4,7 @@ import Landing from './pages/landing/Landing';
 import { Switch, Route, Redirect,withRouter } from 'react-router-dom';
 import { Scrollbars } from 'react-custom-scrollbars';
 
-import './App.css';
+import './App.scss';
 import './sass/index.scss'
 
 // const Landing = lazy(() => import ('./pages/landing/Landing'));

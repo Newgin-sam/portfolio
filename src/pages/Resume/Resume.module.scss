@@ -1,3 +1,5 @@
+@import "../../sass/variables";
+
 .spaceAbove {
   margin-top: 1rem;
 }
@@ -8,6 +10,10 @@
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 5rem;
   grid-row-gap: 2rem;
+
+  @media only screen and (max-width: $bp-small) {
+    grid-template-columns: 1fr;
+  }
 }
 .left {
   display: grid;

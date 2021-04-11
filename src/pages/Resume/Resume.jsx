@@ -8,7 +8,7 @@ import SubTitle from '../../componenets/SubTitle/SubTitle';
 import TimelineContent from '../../componenets/TimelineContent/TimelineContent';
 
 //models
-import Education from '../../Models/Education';
+import Education,{summary} from '../../Models/Education';
 import ProfessionalExperience from '../../Models/ProfessionalExperience';
 import Skills from '../../Models/skills';
 
@@ -29,7 +29,9 @@ function Resume(props) {
                     <div className={styles.partContainer}>
                         <SubTitle>Summary</SubTitle>
                         <div className={styles.contentContainer}>
-                            <p className={ `${styles.summaryContent} ${styles.I}`}>Interested in pursuing a career in computer science by gaining knowledge in fields like Algorithms, system design, testing automation with 1 year of work experience. Self-motivated, good team player with excellent technical, communication and interpersonal skills. Deadline focused, able to prioritize tasks and stay calm under pressure. High energy, confident and infectious enthusiasm for technology</p>
+                            <p className={ `${styles.summaryContent} ${styles.I}`}>
+                                {summary}
+                            </p>
                         </div>
                     </div>
                     <div className={styles.skillContainer}>

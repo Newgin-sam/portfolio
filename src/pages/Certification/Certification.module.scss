@@ -1,3 +1,5 @@
+@import "../../sass/variables";
+
 .spaceAbove {
   margin-top: 1rem;
 }
@@ -5,9 +7,22 @@
   display: grid;
   margin-top: 2rem;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 35rem);
+  grid-template-rows: repeat(2, 35rem);
   grid-gap: 5rem;
   margin: 5rem 5rem;
+
+  @media only screen and (max-width: $bp-largest) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 35rem);
+  }
+  @media only screen and (max-width: $bp-medium-small) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 35rem);
+  }
+  @media only screen and (max-width: $bp-smallest) {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(7, 35rem);
+  }
 }
 .card {
   perspective: 600rem;

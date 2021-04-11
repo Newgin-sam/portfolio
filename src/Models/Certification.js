@@ -1,12 +1,12 @@
 const certification = [
     {
-        title:'SOFTWARE DEVELOPER INTERN, SOLARTIS',
+        title:'Software Developer Intern, Solartis',
         field:'intern',
         description:"Completed 3 months Internship",
         organization:'SOLARTIS'
     },
     {
-        title:'SOFTWARE DEVELOPER INTERN, ZOHO',
+        title:'Software Developer Intern, Zoho',
         field:'intern',
         description:"Completed 1 months Internship",
         organization:'ZOHO'

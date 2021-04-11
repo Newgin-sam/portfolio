@@ -1,3 +1,5 @@
+@import "../../sass/variables";
+
 .spaceAbove {
   margin-top: 1rem;
 }
@@ -6,6 +8,9 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 3rem;
+  @media only screen and (max-width: $bp-small) {
+    grid-template-columns: 1fr;
+  }
 }
 .part {
   background-color: #33333387;
@@ -47,6 +52,9 @@
   transition: all 0.2s;
   height: 100%;
   width: 100%;
+  @media only screen and (max-width: $bp-medium) {
+    margin-right: 2rem;
+  }
   &:hover {
     .mediaIcon {
       transform: scale(1.5);

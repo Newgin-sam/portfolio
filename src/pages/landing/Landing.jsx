@@ -27,6 +27,7 @@ const Landing = () => {
             <React.Fragment>
                 <div className={styles.header}>
                 <div className={ home === true ? `${styles.container}` : `${styles.container} ${styles.container__active}`}>
+                
                     <h1 className={  home === true ? `${styles.heading1} ${styles.headingHome}` : `${styles.heading1} ${styles.heading1__active}` }><span>NEWGIN SAM E</span>NEWGIN SAM E<span>NEWGIN SAM E</span></h1>
                     <h2 className={home === true ? `${styles.heading2}` : `${styles.heading2} ${styles.heading2__active}` }> A <span>Software Developer</span> with An Enthusiastic Attitude</h2>
                     <ul className={ home === true ? `${styles.listContainer}` : `${styles.listContainer} ${styles.listContainer__active}` }>

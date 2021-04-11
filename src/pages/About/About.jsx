@@ -24,38 +24,38 @@ function About(props) {
                         <h2 className={styles.aboutStatus}>Currently working as a Software Developer @ solartis.pvt.lmt</h2>
                     </section>
                     <section className={styles.aboutGuns}>
-                        <div className={styles.aboutGuns__1}>
-                            <div className={styles.aboutGuns__innercontainer}>
+                        <div className={`${styles.aboutGuns__1} ${styles.aboutGuns__innercontainer}`}>
+                            <div>
                                 <h4 className = {styles.aboutGuns__head }>BIRTH PLACE</h4>
                                 <h5 className = {styles.aboutGuns__value }>Kanyakumari, Tamil Nadu</h5>
                             </div>
                         </div>
-                        <div className={styles.aboutGuns__2}>
-                            <div className={styles.aboutGuns__innercontainer}>
+                        <div className={`${styles.aboutGuns__1} ${styles.aboutGuns__innercontainer}`}>
+                            <div>
                                 <h4 className = {styles.aboutGuns__head }>RESIDENCE</h4>
                                 <h5 className = {styles.aboutGuns__value }>Chennai, Tamil Nadu</h5>
                             </div>
                         </div>
-                      {/*  <div className={styles.aboutGuns__3}>
-                            <div className={styles.aboutGuns__innercontainer}>
+                      {/*  <div className={`${styles.aboutGuns__1} ${styles.aboutGuns__innercontainer}`}>
+                            <div>
                                 <h4 className = {styles.aboutGuns__head }>HOBBIES</h4>
                                 <h5 className = {styles.aboutGuns__value }></h5>
                             </div>
     </div> */}
-                        <div className={styles.aboutGuns__4}>
-                            <div className={styles.aboutGuns__innercontainer}>
+                        <div className={`${styles.aboutGuns__1} ${styles.aboutGuns__innercontainer}`}>
+                            <div>
                                 <h4 className = {styles.aboutGuns__head }>BORN</h4>
                                 <h5 className = {styles.aboutGuns__value }>28<sup>th</sup> feb' 1999</h5>
                             </div>
                         </div>
-                        <div className={styles.aboutGuns__5}>
-                            <div className={styles.aboutGuns__innercontainer}>
+                        <div className={`${styles.aboutGuns__1} ${styles.aboutGuns__innercontainer}`}>
+                            <div>
                                 <h4 className = {styles.aboutGuns__head }>EDUCATION</h4>
                                 <h5 className = {styles.aboutGuns__value }>Bachelor of Engineering</h5>
                             </div>
                         </div>
-                        <div className={styles.aboutGuns__6}>
-                            <div className={styles.aboutGuns__innercontainer}>
+                        <div className={`${styles.aboutGuns__1} ${styles.aboutGuns__innercontainer}`}>
+                            <div>
                                 <h4 className = {styles.aboutGuns__head }>EMAIL</h4>
                                 <h5 className = {styles.aboutGuns__value }>newginsam@gmail.com</h5>
                             </div>
@@ -65,7 +65,7 @@ function About(props) {
                     <section className={styles.Objective}>
                         <p>
                             Positive driven and confident individual with an apt for learning new technology. Excellent problem solver with strong analytical skills.
-                            I want to work with an organization where i can fully utilize my training and skills, while making a significant contribution to the success of the company.
+                            I want to work with organizations where i can fully utilize my training and skills, while making a significant contribution to the success of the company.
                         </p>
                     </section>
                     <section className = {styles.skills}>
