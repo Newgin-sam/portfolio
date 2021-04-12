@@ -2,9 +2,13 @@ import React from 'react';
 import PageTitle from '../../componenets/PageTitle/PageTitle';
 import PageContainer from '../../componenets/PageContainer/PageContainer';
 import SecondaryTitle from '../../componenets/SecondaryTitle/SecondaryTitle';
+import SkillSet from '../../componenets/SkillSet/SkillSet';
+
 import { FaReact,FaNodeJs,FaNode,FaJava } from "react-icons/fa";
 import { SiJavascript,SiMongodb,SiSass } from "react-icons/si";
 import {AiOutlineConsoleSql} from "react-icons/ai";
+
+import {aboutSkill} from '../../Models/skills';
 
 import styles from './About.module.scss';
 import img from '../../assets/newgin-2.jpeg';
@@ -71,55 +75,13 @@ function About(props) {
                     <section className = {styles.skills}>
                         <PageTitle>SKILLS</PageTitle>
                         <div className={styles.skillContainer}>
-                            <div className={styles.skill}>
-                                <div className={styles.skill__iconContainer}>
-                                    <FaReact className={styles.skill__icon}/>
-                                </div>
-                                <h3 className={styles.skill__iconLegend}>REACT</h3>
-                            </div>
-                            <div className={styles.skill}>
-                                <div className={styles.skill__iconContainer}>
-                                    <FaNode className={styles.skill__icon}/>
-                                </div>
-                                <h3 className={styles.skill__iconLegend}>NODE</h3>
-                            </div>
-                            <div className={styles.skill}>
-                                <div className={styles.skill__iconContainer}>
-                                    <FaNodeJs className={styles.skill__icon}/>
-                                </div>
-                                <h3 className={styles.skill__iconLegend}>EXPRESS</h3>
-                            </div>
-                            <div className={styles.skill}>
-                                <div className={styles.skill__iconContainer}>
-                                    <SiSass className={styles.skill__icon}/>
-                                </div>
-                                <h3 className={styles.skill__iconLegend}>SCSS</h3>
-                            </div>
-                            <div className={styles.skill}>
-                                <div className={styles.skill__iconContainer}>
-                                    <SiJavascript className={styles.skill__icon}/>
-                                </div>
-                                <h3 className={styles.skill__iconLegend}>JAVASCRIPT</h3>
-                            </div>
-                            <div className={styles.skill}>
-                                <div className={styles.skill__iconContainer}>
-                                    <FaJava className={styles.skill__icon}/>
-                                </div>
-                                <h3 className={styles.skill__iconLegend}>JAVA</h3>
-                            </div>
-                            <div className={styles.skill}>
-                                <div className={styles.skill__iconContainer}>
-                                    <SiMongodb className={styles.skill__icon}/>
-                                </div>
-                                <h3 className={styles.skill__iconLegend}>MONGODB</h3>
-                            </div>
-                            <div className={styles.skill}>
-                                <div className={styles.skill__iconContainer}>
-                                    <AiOutlineConsoleSql className={styles.skill__icon}/>
-                                </div>
-                                <h3 className={styles.skill__iconLegend}>SQL</h3>
-                            </div>
-
+                        {
+                            aboutSkill.map(skill => {
+                                return(
+                                    <SkillSet className={styles.skill} skill={skill} />
+                                )
+                            })
+                        }
                         </div>
                     </section>
                 </div>

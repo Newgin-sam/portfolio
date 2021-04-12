@@ -1,0 +1,49 @@
+.skill {
+  background-color: #33333387;
+  box-shadow: 0 0 0.5rem var(--color-primary-light);
+  border-radius: 2px;
+  display: flex;
+  transition: all 0.2s cubic-bezier(1, -0.05, 0.54, 0.47);
+
+  .skill__icon {
+    font-size: 3rem;
+    color: white;
+    transition: all 0.2s ease-in;
+
+    &Container {
+      padding: 1rem;
+      background-color: var(--color-primary);
+      border-radius: 2px;
+      display: flex;
+      justify-content: center;
+      margin: 1rem;
+      width: fit-content;
+    }
+
+    &Legend {
+      font-family: var(--font-secondary);
+      font-size: 2rem;
+      font-weight: 600;
+      margin: auto 1rem;
+      letter-spacing: 1px;
+      color: var(--color-primary);
+    }
+  }
+  &:hover {
+    background-color: #131313ba;
+    box-shadow: 0 0 0.6rem var(--color-primary-light);
+    transform: scale(1.05);
+
+    .skill__icon {
+      color: var(--color-primary);
+
+      &Container {
+        background-color: white;
+      }
+
+      &Legend {
+        color: white;
+      }
+    }
+  }
+}

@@ -5,10 +5,13 @@
   // height: 95%;
   // padding-top: 35vh;
   display: grid;
-  grid-template-columns: 1fr 1fr minmax(min-content, max-content) 5vw;
+  grid-template-columns: 1fr 1fr minmax(min-content, 70rem) 5vw;
   grid-template-rows: 9rem max-content 1fr;
   z-index: 100;
   // transition: all 2s;
+  @media only screen and (max-width: $bp-medium) {
+    grid-template-columns: 5vw 1fr 1fr minmax(min-content, max-content) 5vw;
+  }
 }
 .list__button {
   // grid-column: 4/-1;
@@ -74,10 +77,18 @@
   grid-template-columns: 5vw max-content 1fr max-content 5vw;
   grid-template-rows: 1rem 1fr max-content max-content;
   margin-top: calc(35vh - 9rem);
+  background-color: #0000004f;
+  box-shadow: 0 0 5px var(--color-primary);
+  padding: 2rem 2rem 2rem 3rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    grid-column: 2/5;
+  }
   &__active {
     // animation: fadein 1s;
+    padding: 0rem;
     grid-column: 1/ -1;
-    grid-row: 1/2;
+    grid-row: 1/-1;
     width: 100%;
     margin: 0;
     background-color: rgb(0, 0, 0);
@@ -114,6 +125,13 @@
   //   -0.15rem 0.3rem 0 rgba(0, 0, 200, 0.9);
 
   // animation: glitch 1s infinite;
+
+  @media only screen and (max-width: $bp-smallest) {
+    font-size: 5rem;
+  }
+  @media only screen and (max-width: $bp-micro) {
+    font-size: 4rem;
+  }
   & span {
   }
   & span:first-child {
@@ -150,13 +168,22 @@
 .heading2 {
   font-size: 3rem;
   font-weight: 300;
-  line-height: 3;
+  line-height: 1.8;
   grid-row: 3/4;
   grid-column: 1/-1;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 
   animation: heading2 0.5s;
   animation-delay: 1s;
   animation-fill-mode: backwards;
+
+  @media only screen and (max-width: $bp-medium) {
+    grid-column: 2/4;
+  }
+  @media only screen and (max-width: $bp-micro) {
+    font-size: 2.2rem;
+  }
 
   &__active {
     animation: none;

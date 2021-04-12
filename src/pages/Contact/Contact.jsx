@@ -72,7 +72,7 @@ function Contact(props) {
                 </div>
                 <div className={styles.spaceAbove}>
                     <div className={styles.writeContainer}>
-                        <h1 className={styles.textHeadWrite}> Freelance a Project | Offer a Job</h1>
+                        <h1 className={styles.textHeadWrite}> Freelance your Project | Hire Me</h1>
                         <form onSubmit={handleSubmit}>
                             <div className={styles.formContainer}>
                                 <input type='text' name="name" placeholder='<name>' value= {value.name} className={`${styles.inputs} ${styles.text}`}  onChange={handleChange} required/>

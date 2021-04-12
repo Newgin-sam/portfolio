@@ -1,12 +1,28 @@
+@import "./sass/variables";
 .App {
+  overflow: auto;
+  width: 100%;
+  height: 100vh;
+}
+body {
   background-image: linear-gradient(
       to right bottom,
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.9)
     ),
     url(./assets/newgin-1.jpeg);
-  width: 100%;
-  height: 100vh;
+
   background-size: cover;
-  overflow: auto;
+  background-position: right;
+  @media only screen and (max-width: $bp-medium) {
+    background-position: center;
+  }
+  @media only screen and (max-width: $bp-small) {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.9)
+      ),
+      url(./assets/newgin-phone.jpeg);
+  }
 }
