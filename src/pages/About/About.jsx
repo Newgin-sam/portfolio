@@ -4,10 +4,6 @@ import PageContainer from '../../componenets/PageContainer/PageContainer';
 import SecondaryTitle from '../../componenets/SecondaryTitle/SecondaryTitle';
 import SkillSet from '../../componenets/SkillSet/SkillSet';
 
-import { FaReact,FaNodeJs,FaNode,FaJava } from "react-icons/fa";
-import { SiJavascript,SiMongodb,SiSass } from "react-icons/si";
-import {AiOutlineConsoleSql} from "react-icons/ai";
-
 import {aboutSkill} from '../../Models/skills';
 
 import styles from './About.module.scss';
