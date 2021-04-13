@@ -12,6 +12,12 @@
   @media only screen and (max-width: $bp-medium) {
     grid-template-columns: 5vw 1fr 1fr minmax(min-content, max-content) 5vw;
   }
+  @media only screen and (max-height: $bp-small) {
+    grid-template-rows: 4rem max-content 1fr;
+  }
+  @media only screen and (max-height: $bp-smallest) {
+    grid-template-rows: 0rem max-content 1fr;
+  }
 }
 .list__button {
   // grid-column: 4/-1;
