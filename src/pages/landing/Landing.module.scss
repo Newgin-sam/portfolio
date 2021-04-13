@@ -80,6 +80,7 @@
   background-color: #0000004f;
   box-shadow: 0 0 5px var(--color-primary);
   padding: 2rem 2rem 2rem 3rem;
+  transition: all 0.2s;
 
   @media only screen and (max-width: $bp-medium) {
     grid-column: 2/5;
