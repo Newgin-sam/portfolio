@@ -3,25 +3,25 @@
   // -moz-perspective: 600rem;
   position: relative;
 
-  &__front {
+  &__side {
     height: 100%;
     width: 100%;
     backface-visibility: hidden;
     transition: all 0.5s;
+    box-shadow: 0 0 0.7rem var(--color-primary);
+    border-radius: 4px;
+    background-color: rgba(49, 49, 49, 0.762);
+  }
+
+  &__front {
     position: absolute;
     top: 0;
     left: 0;
-    box-shadow: 0 0 1rem var(--color-primary);
+    border: 2px solid var(--color-primary);
   }
   &__back {
-    height: 100%;
-    width: 100%;
+    border: 2px solid var(--color-grey);
     transform: rotateY(180deg);
-    backface-visibility: hidden;
-    box-shadow: 0 0 1rem var(--color-primary);
-    border-radius: 2px;
-    background-color: rgba(49, 49, 49, 0.762);
-    transition: all 0.5s;
   }
   &:hover {
     .card__front {
@@ -35,7 +35,6 @@
 .certificateContainer {
   height: 100%;
   width: 100%;
-  background-color: rgba(49, 49, 49, 0.762);
   display: grid;
   border-radius: 2px;
 

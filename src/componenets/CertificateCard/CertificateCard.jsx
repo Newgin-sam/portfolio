@@ -6,7 +6,7 @@ function CertificateCard(props) {
     return (
         
         <div className={styles.card}>
-        <div className={styles.card__front}>
+        <div className={`${styles.card__front} ${styles.card__side}`}>
             <div className={styles.certificateContainer}>
                 <div className={styles.iconContainer}>
                     {props.details.field === 'intern' ? (<AiOutlineFileProtect className={styles.icon}/>) : (<AiOutlineFileDone className={styles.icon}/>)}
@@ -14,7 +14,7 @@ function CertificateCard(props) {
                 <p className={styles.bhead}>{props.details.title}</p>
             </div>
         </div>
-        <div className={styles.card__back}>
+        <div className={`${styles.card__back} ${styles.card__side}`}>
             <div className={styles.detailsContainer}>
                 <p className={styles.description}>{props.details.description}</p>
                 <h2 className={styles.at}>@{props.details.organization}</h2>
