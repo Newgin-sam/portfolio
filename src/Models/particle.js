@@ -1,100 +1,52 @@
-import reactsvg from '../assets/react.svg';
-import reduxsvg from '../assets/redux.svg';
-import nodesvg from '../assets/node.svg';
-import sasssvg from '../assets/sass.svg';
-import mongodbsvg from '../assets/mongodb.svg';
-import expresssvg from '../assets/express.svg';
-import firebasesvg from '../assets/firebase.svg';
-import mysqlsvg from '../assets/mysql.svg';
-import javasvg from '../assets/java.svg';
-import javascriptsvg from '../assets/javascript.svg';
 
 export const particleJson = {
     "particles": {
         "number": {
-            "value": 20,
+            "value": 160,
             "density": {
-                "enable": true,
-                "value_area": 1000
+                "enable": false
+            }
+        },
+        "size": {
+            "value": 3,
+            "random": true,
+            "anim": {
+                "speed": 4,
+                "size_min": 0.3
             }
         },
         "line_linked": {
             "enable": false
         },
         "move": {
-            "speed": 1.5,
-            "out_mode": "bounce"
-        },
-        "shape": {
-            "type": [
-                "image"
-            ],
-            "image": [
-                {
-                    "src": expresssvg,
-                    "height": 20,
-                    "width": 20
-                },
-                {
-                    "src": firebasesvg,
-                    "height": 18,
-                    "width": 18
-                },
-                {
-                    "src": mysqlsvg,
-                    "height": 20,
-                    "width": 20
-                },
-                {
-                    "src": javasvg,
-                    "height": 20,
-                    "width": 20
-                },
-                {
-                    "src": javascriptsvg,
-                    "height": 18,
-                    "width": 18
-                },
-                {
-                    "src": mongodbsvg,
-                    "height": 20,
-                    "width": 20
-                },
-                {
-                    "src": reduxsvg,
-                    "height": 20,
-                    "width": 20
-                },
-                {
-                    "src": reactsvg,
-                    "height": 20,
-                    "width": 20
-                },
-                {
-                    "src": nodesvg,
-                    "height": 20,
-                    "width": 30
-                },
-                {
-                    "src": sasssvg,
-                    "height": 19,
-                    "width": 19
-                }
-            ]
-        },
-        // "color": {
-        //   "value": "#CCC"
-        // },
-        "size": {
-            "value": 35,
-            "random": false,
-            "anim": {
-                "enable": true,
-                "speed": 4,
-                "size_min": 15,
-                "sync": false
-            }
+            "random": true,
+            "speed": 1,
+            "direction": "top",
+            "out_mode": "out"
         }
     },
-    "retina_detect": false
+    "interactivity": {
+        "events": {
+            "onhover": {
+                "enable": true,
+                "mode": "bubble"
+            },
+            "onclick": {
+                "enable": true,
+                "mode": "repulse"
+            }
+        },
+        "modes": {
+            "bubble": {
+                "distance": 250,
+                "duration": 2,
+                "size": 0,
+                "opacity": 0
+            },
+            "repulse": {
+                "distance": 400,
+                "duration": 4
+            }
+        }
+    }
 }
