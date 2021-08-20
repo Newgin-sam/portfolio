@@ -1,0 +1,35 @@
+.colorpalletContainer {
+    position: fixed;
+    bottom: 0;
+    margin: 2rem;
+    padding: 1rem 3rem;
+    font-family: monospace;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    background: linear-gradient(45deg, #ff00d4 , #007eff);
+    box-shadow: 0rem 1px 2px black;
+    
+}
+.colorpallet{
+    
+    cursor: pointer;
+}
+.color{
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+.palletContainer{
+    margin: 1rem 0rem;
+    display: flex;
+    gap: 1rem ;
+    cursor: pointer;
+    :hover{
+        transform: scale(1.1);
+    }
+}
+.palletBoxContainer{
+    margin: 1rem;
+}
