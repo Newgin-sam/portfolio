@@ -1,6 +1,6 @@
 .skill {
   background-color: #33333387;
-  box-shadow: 0 0 0.5rem var(--color-primary-light);
+  box-shadow: var(--container-box-shadow);
   border-radius: 2px;
   display: flex;
   transition: all 0.2s cubic-bezier(1, -0.05, 0.54, 0.47);

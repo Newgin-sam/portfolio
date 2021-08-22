@@ -21,10 +21,16 @@
   align-items: center;
   font-size: 1.5rem;
   color: var(--color-grey);
-  box-shadow: 0 0 0.5rem var(--color-primary-light);
+  box-shadow: var(--container-box-shadow);
   &:hover {
     .mediaIcon {
       animation: scale 0.5s;
+    }
+    .mediaText{
+      color: var(--color-primary-dark);
+    }
+    .icon {
+      color: var(--color-primary-mild);
     }
   }
 }
@@ -58,7 +64,7 @@
   &:hover {
     .mediaIcon {
       transform: scale(1.5);
-      color: var(--color-primary);
+      color: var(--color-primary-dark);
     }
   }
 }
@@ -69,7 +75,7 @@
 @keyframes scale {
   50% {
     transform: scale(1.5);
-    color: var(--color-primary);
+    color: var(--color-primary-dark);
   }
 }
 .writeToMe {
@@ -88,7 +94,7 @@
   width: 60vw;
   margin: 4rem auto;
   padding-bottom: 5rem;
-  box-shadow: 0 0 4px var(--color-primary-light);
+  box-shadow: var(--container-box-shadow);
 }
 .formContainer {
   display: grid;
@@ -133,19 +139,20 @@
   font-weight: 500;
   background-color: #5e5e5e;
   font-family: var(--font-primary);
+  background-color: var(--color-primary-mild);
   font-size: 1.75rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: white;
   transition: all 0.2s ease-out;
   &:hover {
-    background-color: #02c2e0cc !important;
+    background-color: var(--color-primary-dark) !important;
     transform: scaleX(1.05);
     box-shadow: 3px 3px 3px var(--color-grey-dark);
   }
   &:active {
     transform: scaleX(1.02);
     box-shadow: 1.5px 1.5px 3px var(--color-grey-dark);
-    background-color: #049cb3cc !important;
+    background-color: var(--color-primary-mild) !important;
   }
 }

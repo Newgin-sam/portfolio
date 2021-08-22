@@ -7,6 +7,9 @@ export const particleJson = {
                 "enable": false
             }
         },
+        // "color": {
+        //     "value": ['#02c2e0', '#d4d400', '#ff2515', '#ff4e9f', '#fff']
+        // },
         "size": {
             "value": 3,
             "random": true,
