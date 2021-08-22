@@ -3,15 +3,17 @@
     bottom: 0;
     margin: 2rem;
     padding: 1rem 3rem;
-    font-family: monospace;
-    border-radius: 10px;
+    font-family: var(--font-quaternary);
+    font-style: italic;
+    letter-spacing: 1px;
+    border-radius: 3px;
     font-size: 1.5rem;
-    background: linear-gradient(45deg, #ff00d4 , #007eff);
-    box-shadow: 0rem 1px 2px black;
+    background: linear-gradient(45deg, var(--color-primary) , var(--color-primary-mild));
+    box-shadow: 0rem 3px 5px black;
     
 }
 .colorpallet{
-    
+    font-weight: 600;
     cursor: pointer;
 }
 .color{

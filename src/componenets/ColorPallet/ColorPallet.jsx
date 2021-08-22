@@ -7,7 +7,11 @@ const ColorPallet = () => {
     const [openPallet, setopenPallet] = useState(false);
 
     const changeCSSrootColor = (color) => {
-
+        setopenPallet(!openPallet);
+        document.documentElement.style.setProperty('--color-primary', color.primary);
+        document.documentElement.style.setProperty('--color-primary-light', color.light);
+        document.documentElement.style.setProperty('--color-primary-dark', color.dark);
+        document.documentElement.style.setProperty('--color-primary-mild', color.mild);
     }
 
     const PalletBox = () => {
