@@ -21,7 +21,7 @@ const ColorPallet = () => {
                     return (
                         <div className={styles.palletContainer} onClick={() => { changeCSSrootColor(color) }}>
                             <span className={styles.color} style={{ backgroundColor: `${color.color}` }}></span>
-                            <span>{color.name} </span>
+                            {/* <span>{color.name} </span> */}
                         </div>
                     )
                 })
@@ -36,7 +36,7 @@ const ColorPallet = () => {
                 openPallet ? <PalletBox /> : null
             }
             <div className={styles.colorpallet} onClick={() => setopenPallet(!openPallet)}>
-                Colour Pallets
+
             </div>
         </div>
     );

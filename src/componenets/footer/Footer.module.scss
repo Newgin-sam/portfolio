@@ -6,6 +6,7 @@
   padding: 0 1rem;
 }
 .text {
+  text-align: center;
   font-size: 1.75rem;
   font-variant: small-caps;
 }
@@ -14,10 +15,9 @@
   right: 0;
   bottom: 0;
   padding: 0.25rem 1.5rem;
-  margin-right: 4rem;
+  width: 100%;
   background-color: black;
   border-radius: 2px;
-  margin: 2rem 4rem;
 }
 .icon {
   color: var(--color-primary);
