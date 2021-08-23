@@ -12,6 +12,7 @@ const ColorPallet = () => {
         document.documentElement.style.setProperty('--color-primary-light', color.light);
         document.documentElement.style.setProperty('--color-primary-dark', color.dark);
         document.documentElement.style.setProperty('--color-primary-mild', color.mild);
+        document.documentElement.style.setProperty('--color-primary-transparent', color.transparent);
     }
 
     const PalletBox = () => {
