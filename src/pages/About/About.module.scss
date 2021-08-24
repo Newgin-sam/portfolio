@@ -86,7 +86,7 @@
   &__innercontainer {
     border-left: 3px solid var(--color-primary);
     padding-left: 1rem;
-    background-color: #8f8f8f17;
+    background-color: var(--color-container-grey);
     padding: 1rem;
   }
 
@@ -140,4 +140,11 @@
   @media only screen and (max-width: $bp-micro) {
     grid-template-columns: 1fr;
   }
+}
+
+.gitContainer{
+  margin: 3rem 0;
+  background-color: var(--color-container-grey);
+  padding: 2rem;
+  box-shadow: var(--container-box-shadow);
 }
