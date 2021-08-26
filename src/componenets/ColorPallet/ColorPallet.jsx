@@ -6,6 +6,15 @@ const ColorPallet = () => {
 
     const [openPallet, setopenPallet] = useState(false);
 
+    if (document.documentElement.style.getPropertyValue('--color-primary') === "") {
+        document.documentElement.style.setProperty('--color-primary', colors[1].primary);
+        document.documentElement.style.setProperty('--color-primary-light', colors[1].light);
+        document.documentElement.style.setProperty('--color-primary-dark', colors[1].dark);
+        document.documentElement.style.setProperty('--color-primary-mild', colors[1].mild);
+        document.documentElement.style.setProperty('--color-primary-transparent', colors[1].transparent);
+    }
+
+
     const changeCSSrootColor = (color) => {
         setopenPallet(!openPallet);
         document.documentElement.style.setProperty('--color-primary', color.primary);

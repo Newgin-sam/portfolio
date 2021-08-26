@@ -126,8 +126,12 @@
 .skillContainer {
   margin-top: 3rem;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 3rem;
+
+  @media only screen and (max-width: $bp-largest) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 
   @media only screen and (max-width: $bp-medium) {
     grid-template-columns: 1fr 1fr 1fr;
@@ -147,4 +151,14 @@
   background-color: var(--color-container-grey);
   padding: 2rem;
   box-shadow: var(--container-box-shadow);
+  display: flex;
+  justify-content: center;
+}
+
+.git-hub-calendar{
+  padding: 2rem;
+  background-color: #191919;
+  background-color: '#191919';
+  padding: 2rem;
+  
 }
