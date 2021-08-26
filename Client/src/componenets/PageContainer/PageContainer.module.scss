@@ -1,14 +1,21 @@
+@import "../../sass/variables";
+
 .container {
   background-color: rgba(0, 0, 0, 0.75);
   width: 80%;
   height: 100%;
   margin: auto;
   margin-top: 12rem;
-  margin-bottom: 8rem;
+  margin-bottom: 10rem;
   padding: 3rem;
   border-radius: 3px;
   animation: opacity ease-in 0.3s, flick 10s infinite;
   box-shadow: 0 0 1rem var(--color-primary);
+
+  @media only screen and (max-width: $bp-smallest) {
+    margin-bottom: 12rem;
+  }
+
 }
 
 @keyframes flick {

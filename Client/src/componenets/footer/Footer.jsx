@@ -8,7 +8,8 @@ const Footer = (props) => {
         <div>
             <ColorPallet />
             <div className={styles.container}>
-                <p className={styles.text}>Designed and Developed with <FaHandHoldingHeart className={styles.icon} />by <span className={styles.span}>Newgin Sam</span></p>
+                <p className={styles.text}>Designed and Developed with <FaHandHoldingHeart className={styles.icon} /></p>
+                <p className={styles.text}>copyrights <spam>&#169;</spam> 2021<span className={styles.span}> Newgin Sam</span>. All Rights Reserved</p>
             </div>
         </div>
     );

@@ -1,7 +1,9 @@
+@import "../../sass/variables";
+
 .colorpalletContainer {
     position: fixed;
     bottom: 0;
-    margin: 5rem 2rem;
+    margin: 8rem 2rem;
     padding: 1rem 1rem;
     font-family: var(--font-quaternary);
     font-style: italic;
@@ -13,6 +15,10 @@
     // background: linear-gradient(45deg, var(--color-primary) , var(--color-primary-mild));
     box-shadow: 0rem 0 1rem var(--color-primary) ;
     
+    @media only screen and (max-width: $bp-smallest) {
+        margin: 12rem 1rem;
+    }
+
 }
 .colorpallet{
     font-weight: 600;

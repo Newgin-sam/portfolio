@@ -10,35 +10,22 @@ import { Info } from '../../Models/aboutInfo'
 
 import styles from './About.module.scss';
 import img from '../../assets/newgin-2.jpeg';
-import Loading from '../../assets/Loading.svg'
+import Loading from '../../assets/Loading.svg';
 
 import parse from 'html-react-parser';
 
 
 const About = (props) => {
     const [colorset, setcolorset] = useState(document.documentElement.style.getPropertyValue('--color-primary'));
-    const [loading, setloading] = useState(true);
 
     const colorTheme = {
-        "level4": document.documentElement.style.getPropertyValue('--color-primary-dark'),
-        "level3": document.documentElement.style.getPropertyValue('--color-primary'),
-        "level2": document.documentElement.style.getPropertyValue('--color-primary-light'),
-        "level1": document.documentElement.style.getPropertyValue('--color-primary-mild'),
-        "level0": '#747474ce',
+        text: '#ffffff',
+        "grade4": document.documentElement.style.getPropertyValue('--color-primary-dark'),
+        "grade3": document.documentElement.style.getPropertyValue('--color-primary'),
+        "grade2": document.documentElement.style.getPropertyValue('--color-primary-light'),
+        "grade1": document.documentElement.style.getPropertyValue('--color-primary-mild'),
+        "grade0": '#747474ce',
     };
-
-    useEffect(() => {
-        setInterval(setloading(false), 3000);
-    }, [loading])
-
-    // useEffect(() => {
-    //     if (colorset !== document.documentElement.style.getPropertyValue('--color-primary')) {
-    //         setcolorset(document.documentElement.style.getPropertyValue('--color-primary'));
-    //         console.log("2");
-    //     }
-    //     console.log('1', colorset, document.documentElement.style.getPropertyValue('--color-primary'));
-
-    // }, []);
 
     const aboutInfo = (infos) => (
         infos.map(info => (
@@ -94,19 +81,17 @@ const About = (props) => {
                     <section className={styles.skills}>
                         <PageTitle>GitHub</PageTitle>
                         <div className={styles.gitContainer}>
-                            {loading ?
-                                <img src={Loading} alt='loading git-hub activity' />
-                                :
-                                <GitHubCalendar className="git-hub-calendar"
-                                    username="newgin-sam"
-                                    blockSize={20}
-                                    style={{ backgroundColor: '#191919', padding: '2rem' }}
-                                    blockMargin={5}
-                                    color={document.documentElement.style.getPropertyValue('--color-primary')}
-                                    theme={colorTheme}
-                                    fontSize={15}
-                                />
-                            }
+
+                            <GitHubCalendar className="git-hub-calendar"
+                                username="newgin-sam"
+                                blockSize={20}
+                                style={{ backgroundColor: '#191919', padding: '2rem' }}
+                                blockMargin={5}
+                                // color={document.documentElement.style.getPropertyValue('--color-primary')}
+                                theme={colorTheme}
+                                fontSize={15}
+                            />
+
                         </div>
                         <div>
                         </div>
