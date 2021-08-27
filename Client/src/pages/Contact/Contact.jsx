@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 
+import emailjs from 'emailjs-com';
+import swal from 'sweetalert';
 import { IoLocationOutline, IoShareSocialOutline } from 'react-icons/io5';
 import { HiOutlineMail } from 'react-icons/hi'
 import { IoLogoInstagram, IoLogoGithub, IoLogoLinkedin } from 'react-icons/io'
@@ -12,7 +13,7 @@ import SecondaryTitle from '../../componenets/SecondaryTitle/SecondaryTitle';
 import styles from './Contact.module.scss';
 
 function Contact(props) {
-    const initialState = { name: 'new', email: 'newginmas28@gmail.com', message: 'hello people', subject: 'interview' };
+    const initialState = { name: '', email: '', message: '', subject: '' };
     const [value, setValue] = useState({ ...initialState });
 
     const handleChange = (event) => {
@@ -22,14 +23,15 @@ function Contact(props) {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        axios.post("/mail", {
-            ...value
-        }).then(res => {
-            if (res.status === 200) {
-                setValue({ ...initialState })
-            }
-            console.log(res);
-        })
+        emailjs.sendForm(process.env.REACT_APP_YOUR_SERVICE_ID, process.env.REACT_APP_YOUR_TEMPLATE_ID, e.target, process.env.REACT_APP_YOUR_USER_ID)
+            .then((result) => {
+                swal("Your Message just logged in", `Will respond as soon as possible ${value.name} !!`, "success");
+                setValue({ ...initialState });
+                e.target.reset();
+            }, (error) => {
+                swal("oops something went wrong!!", `please try later`, "error");
+
+            });
 
     }
 
