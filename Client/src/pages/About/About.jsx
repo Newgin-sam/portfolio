@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import PageTitle from '../../componenets/PageTitle/PageTitle';
 import PageContainer from '../../componenets/PageContainer/PageContainer';
 import SecondaryTitle from '../../componenets/SecondaryTitle/SecondaryTitle';
 import SkillSet from '../../componenets/SkillSet/SkillSet';
 import GitHubCalendar from 'react-github-calendar';
+import { AppContext } from '../../Context/AppContext';
 
 import { aboutSkill } from '../../Models/skills';
 import { Info } from '../../Models/aboutInfo'
@@ -18,6 +19,7 @@ import parse from 'html-react-parser';
 const About = (props) => {
     const [colorset, setcolorset] = useState(document.documentElement.style.getPropertyValue('--color-primary'));
 
+    const context = useContext(AppContext);
     const colorTheme = {
         text: '#ffffff',
         "grade4": document.documentElement.style.getPropertyValue('--color-primary-dark'),
@@ -38,6 +40,17 @@ const About = (props) => {
         ))
     )
 
+    useEffect(() => {
+        if (context.colorChange === true) {
+            colorTheme.grade1 = document.documentElement.style.getPropertyValue('--color-primary-mild');
+            colorTheme.grade2 = document.documentElement.style.getPropertyValue('--color-primary-light');
+            colorTheme.grade3 = document.documentElement.style.getPropertyValue('--color-primary');
+            colorTheme.grade4 = document.documentElement.style.getPropertyValue('--color-primary-dark');
+
+        }
+        context.setcolorChange(false)
+
+    }, [context.colorChange])
 
     return (
         <div>

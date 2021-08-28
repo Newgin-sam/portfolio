@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import styles from './ColorPallet.module.scss';
 import { colors } from '../../Models/ColorPallet';
+import { AppContext } from '../../Context/AppContext';
 
 const ColorPallet = () => {
+
+    const { setcolorChange } = useContext(AppContext);
 
     const [openPallet, setopenPallet] = useState(false);
 
@@ -22,6 +25,7 @@ const ColorPallet = () => {
         document.documentElement.style.setProperty('--color-primary-dark', color.dark);
         document.documentElement.style.setProperty('--color-primary-mild', color.mild);
         document.documentElement.style.setProperty('--color-primary-transparent', color.transparent);
+        setcolorChange(true);
     }
 
     const PalletBox = () => {
