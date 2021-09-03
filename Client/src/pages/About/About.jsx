@@ -26,7 +26,7 @@ const About = (props) => {
         "grade3": document.documentElement.style.getPropertyValue('--color-primary'),
         "grade2": document.documentElement.style.getPropertyValue('--color-primary-light'),
         "grade1": document.documentElement.style.getPropertyValue('--color-primary-mild'),
-        "grade0": '#747474ce',
+        "grade0": document.documentElement.style.getPropertyValue('--color-primary-transparent'),
     };
 
     const aboutInfo = (infos) => (
@@ -46,7 +46,7 @@ const About = (props) => {
             colorTheme.grade2 = document.documentElement.style.getPropertyValue('--color-primary-light');
             colorTheme.grade3 = document.documentElement.style.getPropertyValue('--color-primary');
             colorTheme.grade4 = document.documentElement.style.getPropertyValue('--color-primary-dark');
-
+            colorTheme.grade0 = document.documentElement.style.getPropertyValue('--color-primary-transparent');
         }
         context.setcolorChange(false)
 
