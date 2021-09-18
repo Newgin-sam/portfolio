@@ -2,14 +2,23 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const sendMail = require('./mail');
+const path = require('path');
 app.use(express.json());
 app.use(cors());
 
-app.get('/', (req, res) => {
+app.use(function (req, res, next) {
+    res.header('Access-Control-Allow-Origin', 'http://localhost:3000');
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+    next();
+});
+
+// test route
+app.get('/api', (req, res) => {
     res.send("hello people!!");
 })
 
-app.post('/mail', (req, res) => {
+//mail route
+app.post('/api/mail', (req, res) => {
     console.log("mail sent !!", req.body)
     const isSend = sendMail(req.body);
     if (isSend) {
@@ -17,12 +26,21 @@ app.post('/mail', (req, res) => {
             status: 'sucsess',
             message: 'Mail sent !!'
         })
+    } else {
+        res.status(400).json({
+            status: 'failed',
+            message: 'Unable to send Mail !!'
+        })
     }
-    res.status(400).json({
-        status: 'failed',
-        message: 'Unable to send Mail !!'
-    })
 })
+
+app.use(express.static('client/build'));
+if (process.env.NODE_ENV === 'production') {
+    app.get('/*', (req, res) => {
+        res.sendFile(path.resolve(__dirname, './client', 'build', 'index.html'))
+    });
+}
+
 
 const port = process.env.PORT || 5000;
 
