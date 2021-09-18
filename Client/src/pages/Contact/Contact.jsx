@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import emailjs from 'emailjs-com';
 import swal from 'sweetalert';
+import axios from 'axios';
+
 import { IoLocationOutline, IoShareSocialOutline } from 'react-icons/io5';
 import { HiOutlineMail } from 'react-icons/hi'
 import { IoLogoInstagram, IoLogoGithub, IoLogoLinkedin } from 'react-icons/io'
@@ -9,7 +11,6 @@ import { IoLogoInstagram, IoLogoGithub, IoLogoLinkedin } from 'react-icons/io'
 import PageContainer from '../../componenets/PageContainer/PageContainer';
 import PageTitle from '../../componenets/PageTitle/PageTitle';
 import SecondaryTitle from '../../componenets/SecondaryTitle/SecondaryTitle';
-
 import styles from './Contact.module.scss';
 
 function Contact(props) {
@@ -20,18 +21,20 @@ function Contact(props) {
         setValue({ ...value, [event.target.name]: event.target.value });
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
-        emailjs.sendForm(process.env.REACT_APP_YOUR_SERVICE_ID, process.env.REACT_APP_YOUR_TEMPLATE_ID, e.target, process.env.REACT_APP_YOUR_USER_ID)
-            .then((result) => {
-                swal("Your Message just logged in", `Will respond as soon as possible ${value.name} !!`, "success");
-                setValue({ ...initialState });
-                e.target.reset();
-            }, (error) => {
-                swal("oops something went wrong!!", `please try later`, "error");
+        // const res = await axios.post('',{...value});
+        axios.post('/api/mail', { ...value }).then(res => console.log(res));
+        // emailjs.sendForm(process.env.REACT_APP_YOUR_SERVICE_ID, process.env.REACT_APP_YOUR_TEMPLATE_ID, e.target, process.env.REACT_APP_YOUR_USER_ID)
+        // .then((result) => {
+        //     swal("Your Message just logged in", `Will respond as soon as possible ${value.name} !!`, "success");
+        //     setValue({ ...initialState });
+        //     e.target.reset();
+        // }, (error) => {
+        //     swal("oops something went wrong!!", `please try later`, "error");
 
-            });
+        // });
 
     }
 
