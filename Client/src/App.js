@@ -34,7 +34,6 @@ const App = (props) => {
 
             <Switch>
 
-
               <Route exact
                 path='/'
                 render={() => <div> </div>}
