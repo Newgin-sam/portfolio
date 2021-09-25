@@ -16,7 +16,7 @@ const Landing = () => {
         else {
             sethome(false);
         }
-    }, [])
+    }, [location])
 
     const handleClick = (ishome) => {
         if ((ishome === true && home === false) || (ishome === false && home === true)) {

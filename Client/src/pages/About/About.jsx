@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from 'react';
+import React, { useEffect, useContext } from 'react';
 import PageTitle from '../../componenets/PageTitle/PageTitle';
 import PageContainer from '../../componenets/PageContainer/PageContainer';
 import SecondaryTitle from '../../componenets/SecondaryTitle/SecondaryTitle';
@@ -11,13 +11,13 @@ import { Info } from '../../Models/aboutInfo'
 
 import styles from './About.module.scss';
 import img from '../../assets/newgin-2.jpeg';
-import Loading from '../../assets/Loading.svg';
+// import Loading from '../../assets/Loading.svg';
 
 import parse from 'html-react-parser';
 
 
 const About = (props) => {
-    const [colorset, setcolorset] = useState(document.documentElement.style.getPropertyValue('--color-primary'));
+    // const [colorset, setcolorset] = useState(document.documentElement.style.getPropertyValue('--color-primary'));
 
     const context = useContext(AppContext);
     const colorTheme = {
@@ -50,7 +50,7 @@ const About = (props) => {
         }
         context.setcolorChange(false)
 
-    }, [context.colorChange])
+    }, [colorTheme, context.colorChange])
 
     return (
         <div>
